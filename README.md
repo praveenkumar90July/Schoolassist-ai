@@ -1,40 +1,149 @@
-# Schoolassist-ai
+# 🎓 SchoolAssist AI
 
-AI-powered chatbot designed for small and mid-sized schools to automate parent and student queries.
+> AI-powered School Analytics & Intelligent Assistant for K-12 Schools
 
-## Features
+SchoolAssist AI is an intelligent school management platform that combines
+analytics, dashboards, Retrieval-Augmented Generation (RAG), and Large Language Models
+to help schools automate communication, monitor performance, and make better decisions.
 
-- FAQ chatbot using school knowledge base
-- PDF ingestion for circulars and policies
-- Retrieval-Augmented Generation (RAG)
-- FastAPI backend
-- Simple Web UI
-- Docker-ready deployment
+---
 
-## Use Cases
+## ✨ Key Features
 
-- Admission queries
-- Fee structure explanation
+### 🤖 AI Assistant
+- Answer parent queries instantly
+- School policy search
+- Admission guidance
 - Homework lookup
-- School timing and transport info
 - Circular search
+- Intelligent FAQ
 
-## Tech Stack
+### 📊 Analytics Dashboard *(In Progress)*
+- Student Performance Dashboard
+- Attendance Analytics
+- Fee Collection Dashboard
+- Teacher Performance
+- School KPI Dashboard
+- AI-generated Insights
 
-- FastAPI
-- OpenAI API
-- FAISS
-- Python
-- Docker
+### 📚 Knowledge Base
+- PDF ingestion
+- School circular indexing
+- Vector search using FAISS
+- Semantic search
 
-## Architecture
+### 📄 Report Generation
+- Parent meeting summary
+- Student report comments
+- Attendance reports
+- AI-generated recommendations
 
-User → FastAPI → Vector Search (FAISS) → LLM → Response
+---
 
-## Setup
+## 🏗 Architecture
 
-```bash
-git clone https://github.com/yourusername/schoolassist-ai.git
-cd schoolassist-ai
-pip install -r requirements.txt
-uvicorn main:app --reload
+```
+                +----------------------+
+                |      Web Client      |
+                +----------+-----------+
+                           |
+                           v
+                  FastAPI Backend
+                           |
+        +------------------+------------------+
+        |                                     |
+        v                                     v
+   FAISS Vector DB                     SQLite Database
+        |                                     |
+        +------------------+------------------+
+                           |
+                           v
+                      OpenAI / Ollama
+                           |
+                           v
+                      AI Response
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|--------|------------|
+| Frontend | Next.js (Planned) |
+| Backend | FastAPI |
+| Database | SQLite |
+| Vector Store | FAISS |
+| AI | OpenAI GPT |
+| Language | Python |
+| Deployment | Docker |
+
+---
+
+## 📁 Project Structure
+
+```
+Schoolassist-ai/
+
+backend/
+
+frontend/
+
+data/
+
+docs/
+
+screenshots/
+
+architecture/
+
+requirements.txt
+
+README.md
+```
+
+---
+
+## 🚀 Roadmap
+
+- [x] FastAPI backend
+- [x] RAG pipeline
+- [x] PDF ingestion
+- [x] OpenAI integration
+- [ ] School Analytics Dashboard
+- [ ] Student Management
+- [ ] Attendance Dashboard
+- [ ] Fee Analytics
+- [ ] Teacher Dashboard
+- [ ] AI Report Generation
+- [ ] Role-based Authentication
+- [ ] Docker Deployment
+
+---
+
+## 📸 Screenshots
+
+Coming Soon
+
+---
+
+## ⚡ Future Enhancements
+
+- Multi-school support
+- Mobile application
+- Voice Assistant
+- WhatsApp integration
+- Parent Portal
+- Teacher Portal
+- Predictive Analytics
+- AI Attendance Insights
+
+---
+
+## 👨‍💻 Author
+
+Praveenkumar
+
+IT Consultant | Data Analytics | AI Applications
+
+Building intelligent software using Python, FastAPI, SQL, Power BI and Generative AI.
